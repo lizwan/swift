@@ -13,7 +13,7 @@ struct Contact {
 
 class Person {
     var fullName: String = "John doe" {
-        willSet (newFullName) {
+        willSet (newFullName) { //사용자 정의 파라미터를 사용할 수 있다.
             println("Current fullName is \(fullName). New fullName is \(newFullName).")
         }
         didSet {
