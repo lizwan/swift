@@ -1,3 +1,4 @@
+// ch.14.함수.11.Curried Functions.14-26.swift 커리드 함수 문법
 func addCurried(a: Int)(b: Int) -> Int {
     return a + b
 }

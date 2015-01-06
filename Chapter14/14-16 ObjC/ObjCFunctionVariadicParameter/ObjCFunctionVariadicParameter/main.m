@@ -1,24 +1,17 @@
-//
-//  main.m
-//  ObjCFunctionVariadicParameter
-//
-//  Created by Keun young Kim on 2014. 10. 23..
-//  Copyright (c) 2014년 Keun young Kim. All rights reserved.
-//
-
+// ch.14.함수.07.가변 인자 파라미터.14-16.Objective-C의 가변 인자 파라미터 함수
 #import <UIKit/UIKit.h>
 
 double average(int cnt, ...) {
     int total = 0;
     
     va_list list;
-    va_start(list, cnt);
+    va_start(list, cnt);    //가변인자 초기화
     
     for (int ii = 0; ii < cnt; ii++) {
-        total += va_arg(list, int);
+        total += va_arg(list, int); //가변인자 읽고
     }
     
-    va_end(list);
+    va_end(list);   //포인터 정리
     
     return (double)total / cnt;
 }
